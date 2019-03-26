@@ -1,0 +1,66 @@
+{
+    "manifestVersion": 1,
+    "id": "sitecore-deploy",
+    "name": "Sitecore Deploy",
+    "version": "0.0.2",
+    "publisher": "adoprog",
+	"tags": [
+		"package",
+		"Sitecore",
+		"deploy",
+		"build",
+		"pipeline",
+		"adoprog",
+		"production"
+	],
+	"screenshots": [
+		{
+		   "path": "images/screenshot.png"
+		}
+	],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+	"content": {
+		"details": {
+		  "path": "readme.md"
+		},
+		"license": {
+		  "path": "license.txt"
+		}
+	},
+	"links": {
+		"getstarted": {
+		  "uri": "https://github.com/adoprog/Sitecore-Courier"
+		},
+		"support": {
+		  "uri": "https://github.com/adoprog/Sitecore-Courier/issues"
+		}
+	},
+    "description": "Deploy Sitecore using SIF",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "courierTask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "courierTask"
+            }
+        }
+    ]
+}
