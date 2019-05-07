@@ -11,7 +11,7 @@
     "author": "adoprog",
     "version": {
         "Major": 0,
-        "Minor": 27,
+        "Minor": 28,
         "Patch": 0
     },
     "instanceNameFormat": "Sitecore Deploy",
@@ -48,8 +48,8 @@
         },
 		{
             "name": "scInstallRoot",
-            "type": "filePath",
-            "label": "Sitecore Resources (where the wdp packages and configurations are stored)",
+            "type": "string",
+            "label": "Sitecore Resources (folder where the wdp packages and configurations are stored)",
             "defaultValue": "",
             "required": true,
             "helpMarkDown": ""
@@ -72,8 +72,8 @@
         },
 		{
             "name": "scInstallDirectory",
-            "type": "filePath",
-            "label": "Websites Root (where the website will be installed)",
+            "type": "string",
+            "label": "Websites Root (folder where the website will be installed)",
             "defaultValue": "",
             "required": true,
             "helpMarkDown": ""
@@ -88,7 +88,7 @@
         },
 		{
             "name": "solrRoot",
-            "type": "filePath",
+            "type": "string",
             "label": "Solr Root",
             "defaultValue": "",
             "required": true,
