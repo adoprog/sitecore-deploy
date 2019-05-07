@@ -8,9 +8,9 @@ https://marketplace.visualstudio.com/items?itemName=adoprog.sitecore-deploy
 
 You still need to install SIF on a target machine, as well as make sure you have a proper Solr version, etc.
 
-`Register-PSRepository -Name SitecoreGallery -SourceLocation https://sitecore.myget.org/F/sc-powershell/api/v2
+`Register-PSRepository -Name SitecoreGallery -SourceLocation https://sitecore.myget.org/F/sc-powershell/api/v2`
 
-Install-Module SitecoreInstallFramework`
+`Install-Module SitecoreInstallFramework`
 
 Also, you need to install all prerequisites via `Install-SitecoreConfiguration -Path .\prerequisites.json`
 
