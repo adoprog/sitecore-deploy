@@ -1,4 +1,11 @@
 # sitecore-deploy
-Azure DevOps extension to deploy Sitecore using SIF
+This extension aims to simplify repeatable deployments of your pull request, etc. builds to the DEV/QA environments. It only supports XP0 configuration as of now and therefore is not suitable for production deployes.
 
-tfx extension create --manifest-globs vss-extension.json
+You still need to install SIF on a target machine, as well as make sure you have a proper Solr version, etc.
+
+Register-PSRepository -Name SitecoreGallery -SourceLocation https://sitecore.myget.org/F/sc-powershell/api/v2
+Install-Module SitecoreInstallFramework
+
+Also, you need to install all prerequisites via Install-SitecoreConfiguration -Path .\prerequisites.json
+
+Here's the sample guide on setting up Sitecore manually: https://buoctrenmay.com/2019/04/06/sitecore-xp-9-1-update-1-step-by-step-install-guide-on-your-machine/

@@ -32,7 +32,7 @@
 			  },
             "label": "Mode",
             "defaultValue": "install",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
 		{
@@ -43,15 +43,15 @@
 			  },
             "label": "Sitecore Version",
             "defaultValue": "9.1.1",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
 		{
             "name": "scInstallRoot",
             "type": "filePath",
-            "label": "Sitecore Resources (where the wdp packages are stored)",
+            "label": "Sitecore Resources (where the wdp packages and configurations are stored)",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
 		{
@@ -59,7 +59,7 @@
             "type": "string",
             "label": "Website Name Prefix",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
 		{
@@ -67,7 +67,7 @@
             "type": "string",
             "label": "Sitecore Admin Password",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
 		{
@@ -75,7 +75,7 @@
             "type": "filePath",
             "label": "Websites Root (where the website will be installed)",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
 		{
@@ -83,7 +83,7 @@
             "type": "string",
             "label": "Solr Url",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
 		{
@@ -91,7 +91,7 @@
             "type": "filePath",
             "label": "Solr Root",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
         {
@@ -99,7 +99,7 @@
             "type": "string",
             "label": "Solr Service",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
         {
@@ -107,7 +107,7 @@
             "type": "string",
             "label": "Sql Server",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
         {
@@ -115,7 +115,7 @@
             "type": "string",
             "label": "Sql Admin User",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         },
         {
@@ -123,7 +123,7 @@
             "type": "string",
             "label": "Sql Admin Password",
             "defaultValue": "",
-            "required": false,
+            "required": true,
             "helpMarkDown": ""
         }
     ],
