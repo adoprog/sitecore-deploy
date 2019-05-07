@@ -1,6 +1,6 @@
 # Sitecore Deploy (beta)
 
-<img src="/images/extension-icon.png" align="left" height="100" width="100" >
+<img src="https://raw.githubusercontent.com/adoprog/sitecore-deploy/master/images/extension-icon.png" align="left" height="100" width="100" >
 
 This extension aims to simplify repeatable deployments of your pull request, etc. builds to the DEV/QA environments. It only supports XP0 configuration as of now and therefore is not suitable for production deployments.
 
@@ -18,4 +18,4 @@ If you're using SQL 2017, make sure to install https://www.microsoft.com/en-us/d
 Here's the sample guide on setting up Sitecore manually: https://buoctrenmay.com/2019/04/06/sitecore-xp-9-1-update-1-step-by-step-install-guide-on-your-machine/
 
 
-<img src="/images/screenshot.png">
+<img src="https://raw.githubusercontent.com/adoprog/sitecore-deploy/master/images/screenshot.png">
