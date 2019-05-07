@@ -2,7 +2,7 @@
 
 <img src="/images/extension-icon.png" align="left" height="100" width="100" >
 
-This extension aims to simplify repeatable deployments of your pull request, etc. builds to the DEV/QA environments. It only supports XP0 configuration as of now and therefore is not suitable for production deployes.
+This extension aims to simplify repeatable deployments of your pull request, etc. builds to the DEV/QA environments. It only supports XP0 configuration as of now and therefore is not suitable for production deployments.
 
 You still need to install SIF on a target machine, as well as make sure you have a proper Solr version, etc.
 
