@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "sitecore-deploy",
     "name": "Sitecore Deploy",
-    "version": "0.0.2",
+    "version": "0.0.8",
     "publisher": "adoprog",
 	"tags": [
 		"package",
@@ -33,10 +33,10 @@
 	},
 	"links": {
 		"getstarted": {
-		  "uri": "https://github.com/adoprog/Sitecore-Courier"
+		  "uri": "https://github.com/adoprog/Sitecore-Deploy"
 		},
 		"support": {
-		  "uri": "https://github.com/adoprog/Sitecore-Courier/issues"
+		  "uri": "https://github.com/adoprog/Sitecore-Deploy/issues"
 		}
 	},
     "description": "Deploy Sitecore using SIF",
@@ -48,7 +48,7 @@
     },
     "files": [
         {
-            "path": "courierTask"
+            "path": "deployTask"
         }
     ],
     "contributions": [
@@ -59,7 +59,7 @@
                 "ms.vss-distributed-task.tasks"
             ],
             "properties": {
-                "name": "courierTask"
+                "name": "deployTask"
             }
         }
     ]

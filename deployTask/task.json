@@ -1,8 +1,8 @@
 {
-    "id": "ff568373-37d3-4fd2-9042-a01eef8f84b3",
+    "id": "ff568373-37d3-4fd2-9042-a01eef8f84b4",
     "name": "package",
-    "friendlyName": "Deploy Sitecore",
-    "description": "Deploy Sitecore",
+    "friendlyName": "Sitecore Deploy",
+    "description": "Sitecore Deploy ",
     "helpMarkDown": "",
     "category": "Release",
     "visibility": [
@@ -11,7 +11,7 @@
     "author": "adoprog",
     "version": {
         "Major": 0,
-        "Minor": 20,
+        "Minor": 27,
         "Patch": 0
     },
     "instanceNameFormat": "Sitecore Deploy",
@@ -23,6 +23,37 @@
         }
     ],
     "inputs": [
+		{
+            "name": "mode",
+            "type": "pickList",
+			"options": {
+				"install": "Install",
+				"uninstall": "Uninstall",
+			  },
+            "label": "Mode",
+            "defaultValue": "install",
+            "required": false,
+            "helpMarkDown": ""
+        },
+		{
+            "name": "sitecoreVersion",
+            "type": "pickList",
+			"options": {
+				"9.1.1": "9.1 Update 1",
+			  },
+            "label": "Sitecore Version",
+            "defaultValue": "9.1.1",
+            "required": false,
+            "helpMarkDown": ""
+        },
+		{
+            "name": "scInstallRoot",
+            "type": "filePath",
+            "label": "Sitecore Resources (where the wdp packages are stored)",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": ""
+        },
 		{
             "name": "prefix",
             "type": "string",
@@ -40,9 +71,9 @@
             "helpMarkDown": ""
         },
 		{
-            "name": "scInstallRoot",
-            "type": "string",
-            "label": "Sitecore Install Root",
+            "name": "scInstallDirectory",
+            "type": "filePath",
+            "label": "Websites Root (where the website will be installed)",
             "defaultValue": "",
             "required": false,
             "helpMarkDown": ""
@@ -57,7 +88,7 @@
         },
 		{
             "name": "solrRoot",
-            "type": "string",
+            "type": "filePath",
             "label": "Solr Root",
             "defaultValue": "",
             "required": false,
