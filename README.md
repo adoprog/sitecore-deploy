@@ -14,3 +14,5 @@ Also, you need to install all prerequisites via `Install-SitecoreConfiguration -
 If you're using SQL 2017, make sure to install https://www.microsoft.com/en-us/download/details.aspx?id=55114
 
 Here's the sample guide on setting up Sitecore manually: https://buoctrenmay.com/2019/04/06/sitecore-xp-9-1-update-1-step-by-step-install-guide-on-your-machine/
+
+<img src="/images/screenshot.png">
