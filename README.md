@@ -1,4 +1,4 @@
-# Sitecore Deploy
+# Sitecore Deploy (beta)
 
 <img src="/images/extension-icon.png" align="left" height="100" width="100" >
 
