@@ -3,8 +3,7 @@ Trace-VstsEnteringInvocation $MyInvocation
 $mode = "install"
 $prefix = "s911ci"
 $sitecoreAdminPassword = "b"
-$installDirectory = "C:\websites\"
-$scInstallRoot = "C:\sc911_install"
+$resourcesRoot = "C:\sc911_install"
 $solrUrl = "https://localhost:721/solr"
 $solrRoot = "C:\solr\solr-7.2.1"
 $solrService = "Solr-7.2.1"
@@ -15,8 +14,7 @@ $sqlAdminPassword = "Password12345"
 $mode = Get-VstsInput -Name mode -Require
 $prefix = Get-VstsInput -Name prefix -Require
 $sitecoreAdminPassword = Get-VstsInput -Name sitecoreAdminPassword -Require
-$installDirectory = Get-VstsInput -Name scInstallDirectory -Require
-$scInstallRoot = Get-VstsInput -Name scInstallRoot -Require
+$resourcesRoot = Get-VstsInput -Name resourcesRoot -Require
 $solrUrl = Get-VstsInput -Name solrUrl -Require
 $solrRoot = Get-VstsInput -Name solrRoot -Require
 $solrService = Get-VstsInput -Name solrService -Require
@@ -27,8 +25,7 @@ $sqlAdminPassword = Get-VstsInput -Name sqlAdminPassword -Require
 Write-Host "prefix $prefix"
 Write-Host "mode $mode"
 Write-Host "sitecoreAdminPassword $sitecoreAdminPassword"
-Write-Host "installDirectory $installDirectory"
-Write-Host "scInstallRoot $scInstallRoot"
+Write-Host "resourcesRoot $resourcesRoot"
 Write-Host "solrUrl $solrUrl"
 Write-Host "solrRoot $solrRoot"
 Write-Host "solrService $solrService"
@@ -39,10 +36,10 @@ Write-Host "sqlAdminPassword $sqlAdminPassword"
 $XConnectSiteName = "$prefix.xconnect"
 $SitecoreSiteName = "$prefix.sc"
 $IdentityServerSiteName = "$prefix.identityserver"
-$LicenseFile = "$scInstallRoot\license.xml"
-$XConnectPackage = (Get-ChildItem "$scInstallRoot\Sitecore 9* rev. * (OnPrem)_xp0xconnect.scwdp.zip").FullName
-$SitecorePackage = (Get-ChildItem "$scInstallRoot\Sitecore 9* rev. * (OnPrem)_single.scwdp.zip").FullName
-$IdentityServerPackage = (Get-ChildItem "$scInstallRoot\Sitecore.IdentityServer * rev. * (OnPrem)_identityserver.scwdp.zip").FullName
+$LicenseFile = "$resourcesRoot\license.xml"
+$XConnectPackage = (Get-ChildItem "$resourcesRoot\Sitecore 9* rev. * (OnPrem)_xp0xconnect.scwdp.zip").FullName
+$SitecorePackage = (Get-ChildItem "$resourcesRoot\Sitecore 9* rev. * (OnPrem)_single.scwdp.zip").FullName
+$IdentityServerPackage = (Get-ChildItem "$resourcesRoot\Sitecore.IdentityServer * rev. * (OnPrem)_identityserver.scwdp.zip").FullName
 $PasswordRecoveryUrl = "http://$SitecoreSiteName"
 $SitecoreIdentityAuthority = "https://$IdentityServerSiteName"
 $XConnectCollectionService = "https://$XConnectSiteName"
@@ -51,8 +48,7 @@ $AllowedCorsOrigins = "http://$SitecoreSiteName"
 
 # Install XP0 via combined partials file.
 $singleDeveloperParams = @{
-    Path = "$scInstallRoot\XP0-SingleDeveloper.json"
-	InstallDirectory = $installDirectory
+    Path = "$resourcesRoot\XP0-SingleDeveloper.json"
     SqlServer = $sqlServer
     SqlAdminUser = $sqlAdminUser
     SqlAdminPassword = $sqlAdminPassword
@@ -78,7 +74,7 @@ $singleDeveloperParams = @{
 }
 
 Import-Module SitecoreInstallFramework
-Push-Location $SCInstallRoot
+Push-Location $resourcesRoot
 
 if($mode -eq "install"){
     Write-Host "Running Install-SitecoreConfiguration"

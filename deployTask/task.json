@@ -11,7 +11,7 @@
     "author": "adoprog",
     "version": {
         "Major": 0,
-        "Minor": 28,
+        "Minor": 29,
         "Patch": 0
     },
     "instanceNameFormat": "Sitecore Deploy",
@@ -47,7 +47,7 @@
             "helpMarkDown": ""
         },
 		{
-            "name": "scInstallRoot",
+            "name": "resourcesRoot",
             "type": "string",
             "label": "Sitecore Resources (folder where the wdp packages and configurations are stored)",
             "defaultValue": "",
@@ -66,14 +66,6 @@
             "name": "sitecoreAdminPassword",
             "type": "string",
             "label": "Sitecore Admin Password",
-            "defaultValue": "",
-            "required": true,
-            "helpMarkDown": ""
-        },
-		{
-            "name": "scInstallDirectory",
-            "type": "string",
-            "label": "Websites Root (folder where the website will be installed)",
             "defaultValue": "",
             "required": true,
             "helpMarkDown": ""
