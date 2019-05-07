@@ -2,7 +2,8 @@
     "manifestVersion": 1,
     "id": "sitecore-deploy",
     "name": "Sitecore Deploy",
-    "version": "0.0.11",
+    "version": "0.0.13",
+	"public": true,
     "publisher": "adoprog",
 	"tags": [
 		"package",
