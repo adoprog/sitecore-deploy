@@ -17,3 +17,8 @@ steps:
   inputs:
     rootFolder: 
     updateTasksVersion: false
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
