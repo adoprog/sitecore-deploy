@@ -17,6 +17,14 @@ steps:
   inputs:
     rootFolder: 
     updateTasksVersion: false
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'Package'
+    itemPattern: '*.vsix'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
