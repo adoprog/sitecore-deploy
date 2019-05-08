@@ -20,7 +20,7 @@ steps:
 
 - powershell: gci env:* | sort-object name | Format-Table -AutoSize | Out-File $env:BUILD_ARTIFACTSTAGINGDIRECTORY/environment-variables.txt
 
-- powershell: gci *.vsix | Copy-Item $env:BUILD_ARTIFACTSTAGINGDIRECTORY/
+- powershell: Copy-Item *.vsix $env:BUILD_ARTIFACTSTAGINGDIRECTORY/
 
 - task: PublishBuildArtifacts@1
   inputs:
