@@ -11,7 +11,7 @@
     "author": "adoprog",
     "version": {
         "Major": 0,
-        "Minor": 29,
+        "Minor": 31,
         "Patch": 0
     },
     "instanceNameFormat": "Sitecore Deploy",
@@ -39,6 +39,7 @@
             "name": "sitecoreVersion",
             "type": "pickList",
 			"options": {
+				"9.1": "9.1 Initial Release",
 				"9.1.1": "9.1 Update 1",
 			  },
             "label": "Sitecore Version",
