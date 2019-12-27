@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "sitecore-deploy",
     "name": "Sitecore Deploy",
-    "version": "0.0.16",
+    "version": "0.0.17",
 	"public": true,
     "publisher": "adoprog",
 	"tags": [
@@ -38,7 +38,10 @@
 		},
 		"support": {
 		  "uri": "https://github.com/adoprog/Sitecore-Deploy/issues"
-		}
+		},
+		"privacypolicy": {
+		  "uri": "https://github.com/adoprog/sitecore-deploy/blob/master/PRIVACY_POLICY.md"
+		}	
 	},
     "description": "Deploy Sitecore using SIF",
     "categories": [
